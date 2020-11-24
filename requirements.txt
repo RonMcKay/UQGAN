@@ -1,0 +1,15 @@
+torch
+torchvision
+flake8
+black
+isort
+sacred
+matplotlib
+numpy
+sklearn
+scipy
+pymongo
+tabulate==0.8.10
+pandas
+pytorch-lightning>=1.7.0
+git+https://github.com/RonMcKay/bnn

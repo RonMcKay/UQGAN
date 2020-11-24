@@ -1,0 +1,37 @@
+args:
+  batch_size: 256
+  classifier_iterations: 5
+  discriminator_iterations: 5
+  iterations: 2000
+  lambda_cl_loss: 2
+  lambda_gp: 10
+  lambda_real_ood: 0.6
+  lambda_reg_loss: 32
+  num_workers: 8
+  ood_datasets: null
+  reg_type: logcosine
+  val_check_interval: 2
+cls_model:
+  cfg:
+    checkpoint: null
+    method: uqgan
+    name: lenet
+dataset:
+  cfg:
+    cl_dim: 5
+    image_channels: 1
+    image_size: 32
+    mode: train
+    name: mnist+0-4
+    static: false
+gan_model:
+  cfg:
+    disc_checkpoint: null
+    gen_checkpoint: null
+    latent_dim: 128
+    name: toy
+opt:
+  lr: 0.0001
+  lr_cls: 0.001
+  min_lr: 1.0e-05
+  min_lr_cls: 0.0001

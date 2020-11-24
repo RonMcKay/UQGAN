@@ -1,0 +1,23 @@
+args:
+  batch_size: 256
+  epochs: 200
+  num_workers: 8
+cls_model:
+  cfg:
+    checkpoint: null
+    method: softmax
+    n_featuremaps: 32
+    name: resnet
+    norm: layernorm
+dataset:
+  cfg:
+    cl_dim: 5
+    image_channels: 3
+    image_size: 32
+    mode: train
+    name: cifar10+0-4
+    static: false
+opt:
+  lr: 0.001
+  min_lr: 1.0e-05
+  weight_decay: 0.0002

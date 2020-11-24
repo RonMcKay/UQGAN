@@ -1,0 +1,8 @@
+*.pth
+*.png
+*.pkl
+evaluation
+queue_*.sh
+_cache_*
+paper/
+checkpoints

@@ -1,0 +1,30 @@
+args:
+  batch_size: 256
+  beta: 1.0
+  epochs: 100
+  num_workers: 8
+  ood_datasets: null
+cls_model:
+  cfg:
+    checkpoint: null
+    method: entropy
+    name: lenet
+dataset:
+  cfg:
+    cl_dim: 5
+    image_channels: 1
+    image_size: 32
+    mode: train
+    name: mnist+0-4
+    static: false
+gan_model:
+  cfg:
+    conditional: false
+    disc_checkpoint: null
+    gen_checkpoint: null
+    latent_dim: 100
+    name: dcgan
+opt:
+  lr: 0.0002
+  min_lr: 1.0e-05
+  weight_decay: 0.0002

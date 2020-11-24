@@ -1,0 +1,40 @@
+args:
+  batch_size: 256
+  epochs: 100
+  num_workers: 8
+  ood_datasets: null
+  vae_iterations: 10
+cls_model:
+  cfg:
+    checkpoint: null
+    method: gen
+    n_featuremaps: 32
+    name: resnet
+    norm: layernorm
+dataset:
+  cfg:
+    cl_dim: 100
+    image_channels: 3
+    image_size: 64
+    mode: train
+    name: tinyimagenet+0-99
+    static: false
+gan_model:
+  cfg:
+    disc_checkpoint: null
+    disc_img_checkpoint: null
+    disc_latent_checkpoint: null
+    gen_checkpoint: null
+    latent_dim: 200
+    name: sensoyetal2020
+opt:
+  lr: 0.0001
+  lr_cls: 0.0005
+  lr_vae: 0.001
+  weight_decay: 0.0002
+  weight_decay_cls: 0.001
+vae_model:
+  cfg:
+    checkpoint: null
+    latent_dim: 200
+    name: sensoyetal2020

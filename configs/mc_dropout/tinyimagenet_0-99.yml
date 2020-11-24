@@ -1,0 +1,25 @@
+args:
+  batch_size: 256
+  epochs: 200
+  mc_samples: 5
+  num_workers: 8
+cls_model:
+  cfg:
+    checkpoint: null
+    mc_dropout: 0.5
+    method: mc-dropout
+    n_featuremaps: 32
+    name: resnet
+    norm: layernorm
+dataset:
+  cfg:
+    cl_dim: 100
+    image_channels: 3
+    image_size: 64
+    mode: train
+    name: tinyimagenet+0-99
+    static: false
+opt:
+  lr: 0.0002
+  min_lr: 1.0e-05
+  weight_decay: 0.0002

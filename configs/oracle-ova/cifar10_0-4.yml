@@ -1,0 +1,25 @@
+args:
+  batch_size: 256
+  epochs: 100
+  num_workers: 8
+  ood_datasets: cifar10+5-9,lsun,svhn,fmnist,mnist
+cls_model:
+  cfg:
+    checkpoint: null
+    meta_classifier: true
+    method: uqgan
+    n_featuremaps: 32
+    name: resnet
+    norm: layernorm
+dataset:
+  cfg:
+    cl_dim: 5
+    image_channels: 3
+    image_size: 32
+    mode: train
+    name: cifar10+0-4
+    static: false
+opt:
+  lr: 0.0002
+  min_lr: 1.0e-05
+  weight_decay: 0.0002

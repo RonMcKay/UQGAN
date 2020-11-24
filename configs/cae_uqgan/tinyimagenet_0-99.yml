@@ -1,0 +1,22 @@
+args:
+  batch_size: 256
+  epochs: 200
+  num_sample_images: 4
+  num_workers: 12
+  sample_every_n: 5
+cae_model:
+  cfg:
+    checkpoint: null
+    latent_dim: 128
+    name: resnet
+dataset:
+  cfg:
+    cl_dim: 100
+    image_channels: 3
+    image_size: 64
+    mode: train
+    name: tinyimagenet+0-99
+    static: false
+opt:
+  lr: 0.001
+  weight_decay: 0

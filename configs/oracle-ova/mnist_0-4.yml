@@ -1,0 +1,23 @@
+args:
+  batch_size: 256
+  epochs: 100
+  num_workers: 8
+  ood_datasets: mnist+5-9,emnist_l,fmnist,svhn,omniglot,cifar10
+cls_model:
+  cfg:
+    checkpoint: null
+    meta_classifier: true
+    method: uqgan
+    name: lenet
+dataset:
+  cfg:
+    cl_dim: 5
+    image_channels: 1
+    image_size: 32
+    mode: train
+    name: mnist+0-4
+    static: false
+opt:
+  lr: 0.0002
+  min_lr: 1.0e-05
+  weight_decay: 0.0002
