@@ -28,6 +28,7 @@ This repository supplies the code for training an UQGAN als well as all referenc
 - [Useful Information](#useful-information)
   - [Adding your own model](#adding-your-own-model)
   - [Adding your own dataset](#adding-your-own-dataset)
+- [Citing](#citing)
 
 # Installation
 
@@ -111,15 +112,15 @@ If you specify multiple experiment ids the scripts will compute the standard dev
 
 - Deep Ensembles  
   ```
-  python3 eval_ood_detection_deep_ensembles.py with dataset.cfg.mode=test dataset.cfg.static=False args.ood_datasets=<comma separated ood datasets> args.exp_ids=<range of experiment ids>
+  python3 eval_ood_detection_deep_ensembles.py with dataset.cfg.mode=test dataset.cfg.static=True args.ood_datasets=<comma separated ood datasets> args.exp_ids=<range of experiment ids>
   ```
 - Entropy  
   ```
-  python3 eval_ood_detection.py with dataset.cfg.mode=test dataset.cfg.static=False args.ood_datasets=<comma separated ood datasets> args.exp_ids=<range of experiment ids> args.method_overwrite=entropy
+  python3 eval_ood_detection.py with dataset.cfg.mode=test dataset.cfg.static=True args.ood_datasets=<comma separated ood datasets> args.exp_ids=<range of experiment ids> args.method_overwrite=entropy
   ```
 - Everything else  
   ```
-  python3 eval_ood_detection.py with dataset.cfg.mode=test dataset.cfg.static=False args.ood_datasets=<comma separated ood datasets> args.exp_ids=<range of experiment ids>
+  python3 eval_ood_detection.py with dataset.cfg.mode=test dataset.cfg.static=True args.ood_datasets=<comma separated ood datasets> args.exp_ids=<range of experiment ids>
   ```
 
 # Pre-trained Models
@@ -127,15 +128,47 @@ If you specify multiple experiment ids the scripts will compute the standard dev
 Under the following links you can find pre-trained models of the UQGAN with and without MC-Dropout on different datasets.
 
 - UQGAN
-  - MNIST 0-4 ([Generator](https://zenodo.org/record/7135130/files/generator_mnist_0-4.ckpt?download=1) (3.2 MB), [Discriminator](https://zenodo.org/record/7135130/files/discriminator_mnist_0-4.ckpt?download=1) (2.2 MB), [Classifier](https://zenodo.org/record/7135130/files/classifier_mnist_0-4.ckpt?download=1) (250kB), [conditional Auto-Encoder](https://zenodo.org/record/7135130/files/cae_mnist_0-4.ckpt?download=1) (4.2 MB))
-  - CIFAR10 0.4 ([Generator](https://zenodo.org/record/7135130/files/generator_cifar10_0-4.ckpt?download=1) (3.3 MB), [Discriminator](https://zenodo.org/record/7135130/files/discriminator_cifar10_0-4.ckpt?download=1) (2.4 MB), [Classifier](https://zenodo.org/record/7135130/files/classifier_cifar10_0-4.ckpt?download=1) (2.8 MB), [conditional Auto-Encoder](https://zenodo.org/record/7135130/files/cae_cifar10_0-4.ckpt?download=1) (20.4 MB))
-  - CIFAR100 0-49 ([Generator](https://zenodo.org/record/7135130/files/generator_cifar100_0-49.ckpt?download=1) (3.5 MB), [Discriminator](https://zenodo.org/record/7135130/files/discriminator_cifar100_0-49.ckpt?download=1) (2.5 MB), [Classifier](https://zenodo.org/record/7135130/files/classifier_cifar100_0-49.ckpt?download=1) (3.2 MB), [conditional Auto-Encoder](https://zenodo.org/record/7135130/files/cae_cifar100_0-49.ckpt?download=1) (21.7 MB))
-  - Tiny ImageNet 0-99 ([Generator](https://zenodo.org/record/7135130/files/generator_tinyimagenet_0-99.ckpt?download=1) (3.7 MB), [Discriminator](https://zenodo.org/record/7135130/files/discriminator_tinyimagenet_0-99.ckpt?download=1) (2.6 MB), [Classifier](https://zenodo.org/record/7135130/files/classifier_tinyimagenet_0-99.ckpt?download=1) (13.1 MB), [conditional Auto-Encoder](https://zenodo.org/record/7135130/files/cae_tinyimagenet_0-99.ckpt?download=1) (74.7 MB))
+  - MNIST 0-4  
+  [Generator](https://zenodo.org/record/7135130/files/generator_mnist_0-4.ckpt?download=1) (3.2 MB)  
+  [Discriminator](https://zenodo.org/record/7135130/files/discriminator_mnist_0-4.ckpt?download=1) (2.2 MB)  
+  [Classifier](https://zenodo.org/record/7135130/files/classifier_mnist_0-4.ckpt?download=1) (250kB)  
+  [conditional Auto-Encoder](https://zenodo.org/record/7135130/files/cae_mnist_0-4.ckpt?download=1) (4.2 MB)
+  - CIFAR10 0-4  
+  [Generator](https://zenodo.org/record/7135130/files/generator_cifar10_0-4.ckpt?download=1) (3.3 MB)  
+  [Discriminator](https://zenodo.org/record/7135130/files/discriminator_cifar10_0-4.ckpt?download=1) (2.4 MB)  
+  [Classifier](https://zenodo.org/record/7135130/files/classifier_cifar10_0-4.ckpt?download=1) (2.8 MB)  
+  [conditional Auto-Encoder](https://zenodo.org/record/7135130/files/cae_cifar10_0-4.ckpt?download=1) (20.4 MB)
+  - CIFAR100 0-49  
+  [Generator](https://zenodo.org/record/7135130/files/generator_cifar100_0-49.ckpt?download=1) (3.5 MB)  
+  [Discriminator](https://zenodo.org/record/7135130/files/discriminator_cifar100_0-49.ckpt?download=1) (2.5 MB)  
+  [Classifier](https://zenodo.org/record/7135130/files/classifier_cifar100_0-49.ckpt?download=1) (3.2 MB)  
+  [conditional Auto-Encoder](https://zenodo.org/record/7135130/files/cae_cifar100_0-49.ckpt?download=1) (21.7 MB)
+  - Tiny ImageNet 0-99  
+  [Generator](https://zenodo.org/record/7135130/files/generator_tinyimagenet_0-99.ckpt?download=1) (3.7 MB)  
+  [Discriminator](https://zenodo.org/record/7135130/files/discriminator_tinyimagenet_0-99.ckpt?download=1) (2.6 MB)  
+  [Classifier](https://zenodo.org/record/7135130/files/classifier_tinyimagenet_0-99.ckpt?download=1) (13.1 MB)  
+  [conditional Auto-Encoder](https://zenodo.org/record/7135130/files/cae_tinyimagenet_0-99.ckpt?download=1) (74.7 MB)
 - UQGAN with MC-Dropout
-  - MNIST 0-4 ([Generator](https://zenodo.org/record/7135130/files/generator_mnist_0-4_mc.ckpt?download=1) (3.2 MB), [Discriminator](https://zenodo.org/record/7135130/files/discriminator_mnist_0-4_mc.ckpt?download=1) (2.2 MB), [Classifier](https://zenodo.org/record/7135130/files/classifier_mnist_0-4_mc.ckpt?download=1) (250 kB), [conditional Auto-Encoder](https://zenodo.org/record/7135130/files/cae_mnist_0-4.ckpt?download=1) (4.2 MB))
-  - CIFAR10 0.4 ([Generator](https://zenodo.org/record/7135130/files/generator_cifar10_0-4_mc.ckpt?download=1) (3.3 MB), [Discriminator](https://zenodo.org/record/7135130/files/discriminator_cifar10_0-4_mc.ckpt?download=1) (2.4 MB), [Classifier](https://zenodo.org/record/7135130/files/classifier_cifar10_0-4_mc.ckpt?download=1) (2.8 MB), [conditional Auto-Encoder](https://zenodo.org/record/7135130/files/cae_cifar10_0-4.ckpt?download=1) (20.4 MB))
-  - CIFAR100 0-49 ([Generator](https://zenodo.org/record/7135130/files/generator_cifar100_0-49_mc.ckpt?download=1) (3.5 MB), [Discriminator](https://zenodo.org/record/7135130/files/discriminator_cifar100_0-49_mc.ckpt?download=1) (2.5 MB), [Classifier](https://zenodo.org/record/7135130/files/classifier_cifar100_0-49_mc.ckpt?download=1) (3.2 MB), [conditional Auto-Encoder](https://zenodo.org/record/7135130/files/cae_cifar100_0-49.ckpt?download=1) (21.7 MB))
-  - Tiny ImageNet 0-99 ([Generator](https://zenodo.org/record/7135130/files/generator_tinyimagenet_0-99_mc.ckpt?download=1) (3.7 MB), [Discriminator](https://zenodo.org/record/7135130/files/discriminator_tinyimagenet_0-99_mc.ckpt?download=1) (2.6 MB), [Classifier](https://zenodo.org/record/7135130/files/classifier_tinyimagenet_0-99_mc.ckpt?download=1) (13.1 MB), [conditional Auto-Encoder](https://zenodo.org/record/7135130/files/cae_tinyimagenet_0-99.ckpt?download=1) (74.7 MB))
+  - MNIST 0-4  
+  [Generator](https://zenodo.org/record/7135130/files/generator_mnist_0-4_mc.ckpt?download=1) (3.2 MB)  
+  [Discriminator](https://zenodo.org/record/7135130/files/discriminator_mnist_0-4_mc.ckpt?download=1) (2.2 MB)  
+  [Classifier](https://zenodo.org/record/7135130/files/classifier_mnist_0-4_mc.ckpt?download=1) (250 kB)  
+  [conditional Auto-Encoder](https://zenodo.org/record/7135130/files/cae_mnist_0-4.ckpt?download=1) (4.2 MB)
+  - CIFAR10 0-4  
+  [Generator](https://zenodo.org/record/7135130/files/generator_cifar10_0-4_mc.ckpt?download=1) (3.3 MB)  
+  [Discriminator](https://zenodo.org/record/7135130/files/discriminator_cifar10_0-4_mc.ckpt?download=1) (2.4 MB)  
+  [Classifier](https://zenodo.org/record/7135130/files/classifier_cifar10_0-4_mc.ckpt?download=1) (2.8 MB)  
+  [conditional Auto-Encoder](https://zenodo.org/record/7135130/files/cae_cifar10_0-4.ckpt?download=1) (20.4 MB)
+  - CIFAR100 0-49  
+  [Generator](https://zenodo.org/record/7135130/files/generator_cifar100_0-49_mc.ckpt?download=1) (3.5 MB)  
+  [Discriminator](https://zenodo.org/record/7135130/files/discriminator_cifar100_0-49_mc.ckpt?download=1) (2.5 MB)  
+  [Classifier](https://zenodo.org/record/7135130/files/classifier_cifar100_0-49_mc.ckpt?download=1) (3.2 MB)  
+  [conditional Auto-Encoder](https://zenodo.org/record/7135130/files/cae_cifar100_0-49.ckpt?download=1) (21.7 MB)
+  - Tiny ImageNet 0-99  
+  [Generator](https://zenodo.org/record/7135130/files/generator_tinyimagenet_0-99_mc.ckpt?download=1) (3.7 MB)  
+  [Discriminator](https://zenodo.org/record/7135130/files/discriminator_tinyimagenet_0-99_mc.ckpt?download=1) (2.6 MB)  
+  [Classifier](https://zenodo.org/record/7135130/files/classifier_tinyimagenet_0-99_mc.ckpt?download=1) (13.1 MB)  
+  [conditional Auto-Encoder](https://zenodo.org/record/7135130/files/cae_tinyimagenet_0-99.ckpt?download=1) (74.7 MB)
 
 # Results
 
@@ -198,3 +231,7 @@ If you want to add your own dataset you have to follow these steps:
 1. Add your dataloader class in `datasets`. It should accept the following options: `mode`, `transform`, `target_transform`. The `__getitem__` method should return a tuple consisting of the data and the class index. Please have a look at the other implementations for reference.
 2. Add a default config for your dataset in `datasets/__init__.py:default_configs`. Please also have a look at the other configs here for reference.
 3. Add another `if` condition in `load_data` in `datasets/__init__.py`. Choose a short name for your dataset that not already exists. You should define your dataloader as well as a sampler. If you do not want to subsample your dataset just set `sampler=None`.
+
+# Citing
+
+This paper has been accepted for publication at NeurIPS 2022. The proceedings are not yet available and therefore the citation information will be updated as soon as it is published.
