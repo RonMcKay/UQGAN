@@ -234,4 +234,19 @@ If you want to add your own dataset you have to follow these steps:
 
 # Citing
 
-This paper has been accepted for publication at NeurIPS 2022. The proceedings are not yet available and therefore the citation information will be updated as soon as it is published.
+This paper has been accepted for publication at NeurIPS 2022. The proceedings are not yet available and therefore the citation information will be updated as soon as it is published. In the meantime you can cite the pre-published version from arXiv:
+
+```txt
+@article{OberdiekFR2022,
+  author    = {Philipp Oberdiek and
+               Gernot A. Fink and
+               Matthias Rottmann},
+  title     = {{UQGAN:} {A} Unified Model for Uncertainty Quantification of Deep Classifiers trained via Conditional GANs},
+  journal   = {CoRR},
+  volume    = {abs/2201.13279},
+  year      = {2022},
+  url       = {https://arxiv.org/abs/2201.13279},
+  eprinttype = {arXiv},
+  eprint    = {2201.13279},
+}
+```
