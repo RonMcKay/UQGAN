@@ -48,6 +48,7 @@ This repository was tested with **python 3.7**.
    ```
    pip install -r requirements.txt
    ```
+4. Configure paths to datasets and an experiment folder in [`config.py`](./config.py)
 
 # Training
 
@@ -206,7 +207,8 @@ Out-of-Distribution datasets: Tiny ImageNet 100-199, SVHN, Fashion-MNIST, MNIST
   ```
   python train_uqgan.py with args.iterations=1000 dataset.cfg.name=mnist+0-4
   ```
-  If you just want to see the current config run `python train_uqgan.py print_config`. Run `python train_uqgan.py help` to see a list of available commands. You can find more on this on the [sacred documentation page](https://sacred.readthedocs.io/en/latest/index.html).
+  If you just want to see the current config run `python train_uqgan.py print_config`. Run `python train_uqgan.py help` to see a list of available commands. Run `python train_uqgan.py options` to see a list of available hyperparameters with datatype and description.  
+  You can find more on this on the [sacred documentation page](https://sacred.readthedocs.io/en/latest/index.html).
 - You can define class-wise subsets of datasets with the following syntax
   ```
   dataset.cfg.name=<dataset_name>+<class_range>
