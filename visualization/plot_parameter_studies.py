@@ -246,7 +246,7 @@ plot_parameter_study(
 ########################################################################################
 # print("Plotting 'reg_type' parameter study")
 
-# experiment_id_array = np.zeros((7, 7), dtype=np.int)
+# experiment_id_array = np.zeros((7, 7), dtype=np.int32)
 # experiment_id_array[np.triu_indices(7)] = np.arange(358, 386)
 # experiment_id_array[np.tril_indices(7, -1)] = experiment_id_array.T[
 #     np.tril_indices(7, -1)

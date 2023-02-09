@@ -187,7 +187,7 @@ class TinyImageNet(Dataset):
             self.img_data = np.zeros(
                 (self.samples_num,) + self.IMAGE_SHAPE, dtype=np.float32
             )
-            self.label_data = np.zeros((self.samples_num,), dtype=np.int)
+            self.label_data = np.zeros((self.samples_num,), dtype=np.int32)
             for idx in range(self.samples_num):
                 s = self.samples[idx]
                 img = imageio.imread(s[0])
