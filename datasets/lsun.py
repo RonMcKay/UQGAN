@@ -32,9 +32,9 @@ class LSUN(Dataset):
     ) -> None:
         super().__init__()
         if kwargs.get("_log", None) is not None:
-            self.log = kwargs["_log"].getChild("datasets.emnist")
+            self.log = kwargs["_log"].getChild("datasets.lsun")
         else:
-            self.log = logging.getLogger("datasets.emnist")
+            self.log = logging.getLogger("datasets.lsun")
 
         self.transform = transform
         self.target_transform = target_transform
