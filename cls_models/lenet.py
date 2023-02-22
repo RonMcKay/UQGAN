@@ -1,6 +1,8 @@
 import torch
 import torch.nn as nn
 
+from bnn_models import BNN_MODELS
+
 from .base import BaseClassifier
 
 
@@ -13,6 +15,13 @@ class LeNet(BaseClassifier):
         **kwargs,
     ) -> None:
         super().__init__(cl_dim=cl_dim, **kwargs)
+
+        if self.method == "bayes":
+            raise ValueError(
+                "Method 'bayes' needs to be used together with "
+                "one of the bayesian models. "
+                f"Valid options are: [{', '.join(BNN_MODELS)}]"
+            )
 
         if image_size != 32:
             raise ValueError(

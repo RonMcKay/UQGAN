@@ -1,11 +1,20 @@
 import torch.nn as nn
 
+from bnn_models import BNN_MODELS
+
 from .base import BaseClassifier
 
 
 class SmallClassifier(BaseClassifier):
     def __init__(self, cl_dim, image_channels=1, image_size=28, **kwargs):
         super().__init__(cl_dim=cl_dim, **kwargs)
+
+        if self.method == "bayes":
+            raise ValueError(
+                "Method 'bayes' needs to be used together with "
+                "one of the bayesian models. "
+                f"Valid options are: [{', '.join(BNN_MODELS)}]"
+            )
 
         self.mc_dropout: float = kwargs.get("mc_dropout", 0.0)
 

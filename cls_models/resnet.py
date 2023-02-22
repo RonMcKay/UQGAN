@@ -4,6 +4,7 @@ import torch.nn as nn
 from torch.nn.modules.batchnorm import _BatchNorm
 from torch.nn.modules.conv import _ConvNd
 
+from bnn_models import BNN_MODELS
 from gan_models.resnet import ResidualBlock
 
 from .base import BaseClassifier
@@ -39,6 +40,13 @@ class Classifier(BaseClassifier):
         **kwargs,
     ):
         super().__init__(cl_dim=cl_dim, **kwargs)
+
+        if self.method == "bayes":
+            raise ValueError(
+                "Method 'bayes' needs to be used together with "
+                "one of the bayesian models. "
+                f"Valid options are: [{', '.join(BNN_MODELS)}]"
+            )
 
         if log2(image_size) % 1 != 0:
             raise ValueError("'img_size' has to be a power of 2.")

@@ -10,6 +10,8 @@ from utils import load_config_from_checkpoint
 
 bnn_models = Ingredient("bnn_model", ingredients=(datasets,))
 
+BNN_MODELS = ("blenet", "bresnet")
+
 
 @bnn_models.config
 def config():
