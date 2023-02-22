@@ -21,7 +21,6 @@ from pytorch_lightning import LightningModule
 from pytorch_lightning.plugins.io import CheckpointIO
 from pytorch_lightning.utilities.cloud_io import atomic_save, get_filesystem
 from pytorch_lightning.utilities.cloud_io import load as pl_load
-from pytorch_lightning.utilities.types import _PATH
 from sacred.config.config_dict import ConfigDict
 from scipy.stats import gaussian_kde
 import torch
@@ -436,7 +435,7 @@ class CustomCheckpointIO(CheckpointIO):
     def save_checkpoint(
         self,
         checkpoint: Dict[str, Any],
-        path: _PATH,
+        path,
         storage_options: Optional[Any] = None,
     ) -> None:
         path = self.remove_version_from_path(path)
@@ -464,14 +463,14 @@ class CustomCheckpointIO(CheckpointIO):
 
     def load_checkpoint(
         self,
-        path: _PATH,
+        path,
         map_location: Optional[Callable] = lambda storage, loc: storage,
     ) -> Dict[str, Any]:
         fs = get_filesystem(path)
         if fs.exists(path):
             return pl_load(path, map_location=map_location)
 
-    def remove_checkpoint(self, path: _PATH) -> None:
+    def remove_checkpoint(self, path) -> None:
         fs = get_filesystem(path)
         if fs.exists(path):
             fs.rm(path, recursive=True)
