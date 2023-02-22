@@ -104,10 +104,9 @@ def init_experiment(ex: Experiment, mongo_observer: bool = True) -> None:
                 )
                 ex.observers.append(mobs)
             except Exception:
-                log.warning(
-                    "Not able to add the configured MongoObserver. \n{}".format(
-                        traceback.print_exc()
-                    )
+                log.exception(
+                    "Not able to add the configured MongoObserver! "
+                    "I will proceed without it."
                 )  # type: ignore
         else:
             log.info(
