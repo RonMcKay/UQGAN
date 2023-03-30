@@ -236,7 +236,7 @@ If you want to add your own dataset you have to follow these steps:
 
 # Citing
 
-If you find this code useful and use it in your publication, please cite the following
+If you find this code useful and use it for your research, please cite the following
 
 ```txt
 @inproceedings{OberdiekFR2022,
@@ -245,7 +245,7 @@ If you find this code useful and use it in your publication, please cite the fol
   editor = {S. Koyejo and S. Mohamed and A. Agarwal and D. Belgrave and K. Cho and A. Oh},
   pages = {21371--21385},
   publisher = {Curran Associates, Inc.},
-  title = {UQGAN: A Unified Model for Uncertainty Quantification of Deep Classifiers trained via Conditional GANs},
+  title = {{UQGAN: A Unified Model for Uncertainty Quantification of Deep Classifiers trained via Conditional GANs}},
   url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/8648e249887ccb0fe8c067d596e35b40-Paper-Conference.pdf},
   volume = {35},
   year = {2022},
