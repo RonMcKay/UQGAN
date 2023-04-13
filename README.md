@@ -13,7 +13,7 @@
 
 </div>
 
-This repository supplies the code for training an UQGAN als well as all reference implementations of related works mentioned in the paper.
+This repository supplies the code for training an UQGAN as well as all reference implementations of related works mentioned in the paper.
 
 # Table of Contents
 - [Installation](#installation)
@@ -109,7 +109,7 @@ This repository was tested with **python 3.7**.
 
 # Evaluation
 
-If you specify multiple experiment ids the scripts will compute the standard deviation of the evaluation metrics over all runs.
+If you specify multiple experiment IDs, the scripts compute the standard deviation of the evaluation metrics over all runs.
 
 - Deep Ensembles  
   ```
@@ -203,18 +203,18 @@ Out-of-Distribution datasets: Tiny ImageNet 100-199, SVHN, Fashion-MNIST, MNIST
 
 # Useful Information
 
-- Most of the scripts you can find in this repository utilize sacred as experiment manager. You can alter the configuration of the scripts on the command line as e.g.
+- Most of the scripts you can find in this repository utilize sacred as experiment manager. You can alter the configuration of the scripts on the command line as
   ```
   python train_uqgan.py with args.iterations=1000 dataset.cfg.name=mnist+0-4
   ```
-  If you just want to see the current config run `python train_uqgan.py print_config`. Run `python train_uqgan.py help` to see a list of available commands. Run `python train_uqgan.py options` to see a list of available hyperparameters with datatype and description.  
+  If you just want to see the current configuration, run `python train_uqgan.py print_config`. Run `python train_uqgan.py help` to see a list of available commands. Run `python train_uqgan.py options` to see a list of available hyperparameters with datatype and description.  
   You can find more on this on the [sacred documentation page](https://sacred.readthedocs.io/en/latest/index.html).
 - You can define class-wise subsets of datasets with the following syntax
   ```
   dataset.cfg.name=<dataset_name>+<class_range>
   ```
-  A `class_range` can be a list of classes as e.g. `0,3,5`, a range as `0-4` or a combination of both. Thus the following is a valid class subset: `mnist+0,3,6-8`.
-- With the same syntax as for `class_range` you can also define a set of experiment ids for evaluation purposes (if you want to average results over multiple runs). Thus you can do something like
+  A `class_range` can be a list of classes, e.g. `0,3,5`, a range, e.g. `0-4`, or a combination of both. Thus the following is a valid class subset: `mnist+0,3,6-8`.
+- With the same syntax as for `class_range` you can also define a set of experiment IDs for evaluation purposes (if you want to average results over multiple runs). Thus you can do something like
   ```
   python eval_ood_detection.py with args.exp_ids=3,5,16-18
   ```
