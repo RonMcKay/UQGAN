@@ -8,7 +8,7 @@
 <div align="center">
 
 # UQGAN: A Unified Model for Uncertainty Quantification of Deep Classifiers trained via Conditional GANs  
-**Philipp Oberdiek** (TU Dortmund University), **Gernot Fink** (TU Dortmund University),  
+**Philipp Oberdiek** (TU Dortmund University), **Gernot A. Fink** (TU Dortmund University),  
 **Matthias Rottmann** (EPFL, University of Wuppertal)
 
 </div>
