@@ -1,6 +1,6 @@
 <div align="center">
 
-[![GitHub](https://img.shields.io/github/license/RonMcKay/UQGAN?label=license)](https://github.com/RonMcKay/UQGAN/blob/main/LICENSE) ![GitHub repo size](https://img.shields.io/github/repo-size/ronmckay/uqgan?logo=github) [![](https://img.shields.io/badge/code%20style-black-black)](https://github.com/psf/black) [![](https://img.shields.io/badge/mail-contact-informational?link=mailto:git@oberdiek.net&link=mailto:git@oberdiek.net)](mailto:git@oberdiek.net) [![](https://img.shields.io/badge/arXiv-2201.13279-b31b1b.svg)](https://arxiv.org/abs/2201.13279)
+[![](https://img.shields.io/badge/mail-contact-informational?link=mailto:git@oberdiek.net&link=mailto:git@oberdiek.net)](mailto:git@oberdiek.net) [![](https://img.shields.io/badge/arXiv-2201.13279-b31b1b.svg)](https://arxiv.org/abs/2201.13279) [![GitHub](https://img.shields.io/github/license/RonMcKay/UQGAN?label=license)](https://github.com/RonMcKay/UQGAN/blob/main/LICENSE)
 
 
 </div>
