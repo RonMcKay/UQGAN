@@ -1,7 +1,6 @@
 <div align="center">
 
-[![](https://img.shields.io/badge/mail-contact-informational?link=mailto:git@oberdiek.net&link=mailto:git@oberdiek.net)](mailto:git@oberdiek.net) [![](https://img.shields.io/badge/arXiv-2201.13279-b31b1b.svg)](https://arxiv.org/abs/2201.13279) [![GitHub](https://img.shields.io/github/license/RonMcKay/UQGAN?label=license)](https://github.com/RonMcKay/UQGAN/blob/main/LICENSE)
-
+[![](https://img.shields.io/badge/mail-contact-informational?link=mailto:git@oberdiek.net&link=mailto:git@oberdiek.net)](mailto:git@oberdiek.net) [![](https://img.shields.io/badge/NeurIPS-2022-%2368448B)](https://proceedings.neurips.cc/paper_files/paper/2022/hash/8648e249887ccb0fe8c067d596e35b40-Abstract-Conference.html) [![](https://img.shields.io/badge/arXiv-2201.13279-%23B31A1B)](https://arxiv.org/abs/2201.13279) [![GitHub](https://img.shields.io/github/license/RonMcKay/UQGAN?label=license)](https://github.com/RonMcKay/UQGAN/blob/main/LICENSE)
 
 </div>
 
